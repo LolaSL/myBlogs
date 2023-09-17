@@ -20,6 +20,8 @@ import { authActions } from "../store";
 import useStyles from "./utils";
 import Guide from "./Guide";
 import Ideas from "./Ideas";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const classes = useStyles();
@@ -34,6 +36,11 @@ const Header = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLogout = () => {
+    dispatch(authActions.logout());
+    toast.success("Logged out successfully!"); 
   };
 
   return (
@@ -85,8 +92,7 @@ const Header = () => {
                     className={classes.font}
                     onClick={toggleMenu}
                     variant="text"
-                    sx={{ margin: 1, borderRadius: 10, fontSize: "9px", color:"white" }}
-                  
+                    sx={{ margin: 1, borderRadius: 10, fontSize: "9px", color: "white" }}
                   >
                     Menu
                   </Button>
@@ -149,7 +155,7 @@ const Header = () => {
             )}
             <Button
               className={classes.font}
-              onClick={(e) => dispatch(authActions.logout())}
+              onClick={handleLogout} 
               LinkComponent={Link}
               to="/auth"
               variant="contained"
@@ -160,9 +166,10 @@ const Header = () => {
             </Button>
           </>
         )}
-      </Toolbar>
+     </Toolbar>
     </AppBar>
   );
-};
+ };
 
 export default Header;
+   
