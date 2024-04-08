@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import useStyles from "../components/utils";
 import { Link } from "react-router-dom";
-import { List, ListItem, ListItemText } from "@mui/material";
+import { List, ListItem, ListItemText  } from "@mui/material";
 
 const HealthRecipes = () => {
   const classes = useStyles();
@@ -21,25 +21,27 @@ const HealthRecipes = () => {
           sx={{ mt: 3, mb: 3 }}
         >
           <Grid item xs={12} sm={6}>
-            <img
-              width="90%"
-              height="auto"
-              component="img"
-              style={{
-                borderRadius: "10px",
-                boxShadow: "10px 10px 20px #ccc",
-              }}
-              src="./images/83.AVIF"
-              alt="Pumpkin soup"
-              className={classes.image}
-            />
             <List>
               <ListItem
                 component={Link}
                 to="https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=healthy/9v410ya9"
               >
-                <ListItemText className="bottom-right" primary="Get recipe" />
-              </ListItem>
+                <img
+                  width="90%"
+                  height="auto"
+                  component="img"
+                  style={{
+                    borderRadius: "10px",
+                    boxShadow: "10px 10px 20px #ccc",
+                  }}
+                  src="./images/83.AVIF"
+                  alt="Pumpkin soup"
+                  className={classes.image}
+                              />
+            
+                          </ListItem>
+                          <List
+                          <ListItemText className="bottom-right" primary="Get recipe" />
             </List>
           </Grid>
           <Grid item xs={12} sm={6}>

@@ -37,7 +37,8 @@ const HealthRecipes = () => {
               <ListItem
                 component={Link}
                 to="https://www.taste.com.au/recipes/pumpkin-soup/e54ab2b5-7d19-4e4b-b383-781292dc4bfb?r=healthy/9v410ya9"
-              >
+              ></ListItem>
+              <ListItem>
                 <ListItemText className="bottom-right" primary="Get recipe" />
               </ListItem>
             </List>
