@@ -1,10 +1,11 @@
 {
   "name": "myblogs",
   "version": "1.0.0",
-  "description": "",
+  "description": "My blogs",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install && cd"
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +13,7 @@
     "url": "git+https://github.com/LolaSL/myBlogs.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/LolaSL/myBlogs#readme"
+
 }
