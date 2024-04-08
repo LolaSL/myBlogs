@@ -79,6 +79,14 @@ const Ideas = () => {
         >
           Fashion and Style
         </MenuItem>
+        <MenuItem
+          className={classes.font}
+          onClick={toggleMenu}
+          component={Link}
+          to="/healthrecipes"
+        >
+          Fashion and Style
+        </MenuItem>
       </Menu>
     </div>
   );

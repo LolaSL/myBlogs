@@ -17,6 +17,8 @@ import WheatherAndClimate from './pages/WeatherAndClimate';
 import ReasonToVisitIsrael from './pages/ReasonTovisitIstael';
 import Airport from './pages/Airport'
 import FashionStyle from './pages/FashionStyle';
+import { ToastContainer } from 'react-toastify';
+import He
 
 
 
@@ -56,6 +58,7 @@ function App() {
           }
 
         </Routes>
+        <ToastContainer position="bottom-center" limit={1} autoClose={3000} />
       </main>
 
     </React.Fragment>

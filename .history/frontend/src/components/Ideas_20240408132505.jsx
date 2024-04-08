@@ -83,9 +83,9 @@ const Ideas = () => {
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/health-dinner-recipes"
+          to="/health-recipes"
         >
-          A few recipes for healthier dinner
+          Fashion and Style
         </MenuItem>
       </Menu>
     </div>
@@ -93,3 +93,4 @@ const Ideas = () => {
 };
 
 export default Ideas;
+

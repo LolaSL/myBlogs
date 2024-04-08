@@ -83,9 +83,9 @@ const Ideas = () => {
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/health-dinner-recipes"
+          to="/health-recipes"
         >
-          A few recipes for healthier dinner
+           A few recipes for healthier dinner
         </MenuItem>
       </Menu>
     </div>

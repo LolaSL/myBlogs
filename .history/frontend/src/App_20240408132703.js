@@ -1,5 +1,3 @@
-
-import './App.css';
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import { Route, Routes } from 'react-router-dom';
@@ -16,9 +14,12 @@ import Journey from './pages/Journey';
 import CompliteGuide from './pages/CompliteGuide';
 import BestTimeToVisit from './pages/BestTime';
 import WheatherAndClimate from './pages/WeatherAndClimate';
-import ReasonToVisitIsrael from './pages/ReasonTovisitIsrael';
+import ReasonToVisitIsrael from './pages/ReasonTovisitIstael';
 import Airport from './pages/Airport'
 import FashionStyle from './pages/FashionStyle';
+import { ToastContainer } from 'react-toastify';
+import HealthRecipes from './pages/'
+
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           }
 
         </Routes>
+        <ToastContainer position="bottom-center" limit={1} autoClose={3000} />
       </main>
 
     </React.Fragment>

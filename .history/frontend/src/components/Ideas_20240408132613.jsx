@@ -3,7 +3,7 @@ import useStyles from "./utils";
 import { Menu, MenuItem, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Guide = () => {
+const Ideas = () => {
   const classes = useStyles();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -20,7 +20,6 @@ const Guide = () => {
   return (
     <div>
       <Button
-        color="info"
         className={classes.font}
         onClick={openMenu}
         sx={{
@@ -31,11 +30,9 @@ const Guide = () => {
           borderRadius: 6,
           display: "flex",
           justifyContent: "flex",
-
         }}
-   
       >
-       Israel Guide
+        Ideas
       </Button>
       <Menu
         anchorEl={anchorEl}
@@ -50,50 +47,49 @@ const Guide = () => {
           horizontal: "right",
         }}
       >
-        {" "}
         <MenuItem
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/slide"
+          to="/journey"
         >
-          Top destinations
+          Find your next trip and destination
         </MenuItem>
         <MenuItem
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/best-time-to-visit"
+          to="/tips"
         >
-          The best time to visit
+          The best tourist tips
         </MenuItem>
         <MenuItem
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/wheather-and-climate"
+          to="/hotel-tips"
         >
-          Wheather & Climate
+          Tips to find a hotel
         </MenuItem>
         <MenuItem
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/reasons-to-visit-israel"
+          to="/fashion-style"
         >
-          Reasons to visit Israel
+          Fashion and Style
         </MenuItem>
         <MenuItem
           className={classes.font}
           onClick={toggleMenu}
           component={Link}
-          to="/airport"
+          to="/health-dinner-recipes"
         >
-          Ben Gurion Aeroport
+           A few recipes for healthier dinner
         </MenuItem>
       </Menu>
     </div>
   );
 };
 
-export default Guide;
+export default Ideas;
