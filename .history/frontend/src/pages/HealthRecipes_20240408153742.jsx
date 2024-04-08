@@ -139,8 +139,8 @@ const HealthRecipes = () => {
             </Typography>
           </Grid>
         </Grid>
-      </section>
-      <section>
+          </section>
+          <section>
         <Grid
           container
           spacing={4}
@@ -172,16 +172,15 @@ const HealthRecipes = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="h3" className={classes.article}>
-              Chicken cacciatore
+            Chicken cacciatore
             </Typography>
             <Typography variant="body1" className={classes.article}>
-              This chicken cacciatore recipe is nutritious and bursts with
-              flavour. Make it ahead and freeze it for later.
+            This chicken cacciatore recipe is nutritious and bursts with flavour. Make it ahead and freeze it for later.
             </Typography>
           </Grid>
         </Grid>
-      </section>
-      <section>
+          </section>
+          <section>
         <Grid
           container
           spacing={4}
@@ -197,8 +196,8 @@ const HealthRecipes = () => {
                 borderRadius: "10px",
                 boxShadow: "10px 10px 20px #ccc",
               }}
-              src="./images/87.AVIF"
-              alt="Aussie-style beef and salad tacos"
+              src="./images/8.AVIF"
+              alt="Chicken cacciatore"
               className={classes.image}
             />
             <List>
@@ -213,12 +212,10 @@ const HealthRecipes = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="h3" className={classes.article}>
-              Aussie-style beef and salad tacos
+            Chicken cacciatore
             </Typography>
             <Typography variant="body1" className={classes.article}>
-              Our go-to tacos recipe These tacos are a fresh and flavourful
-              twist on everyone’s favourite Mexican meal. It may stray from
-              Mexican tradition...
+            This chicken cacciatore recipe is nutritious and bursts with flavour. Make it ahead and freeze it for later.
             </Typography>
           </Grid>
         </Grid>

@@ -216,9 +216,8 @@ const HealthRecipes = () => {
               Aussie-style beef and salad tacos
             </Typography>
             <Typography variant="body1" className={classes.article}>
-              Our go-to tacos recipe These tacos are a fresh and flavourful
-              twist on everyone’s favourite Mexican meal. It may stray from
-              Mexican tradition...
+              This chicken cacciatore recipe is nutritious and bursts with
+              flavour. Make it ahead and freeze it for later.
             </Typography>
           </Grid>
         </Grid>

@@ -216,9 +216,7 @@ const HealthRecipes = () => {
               Aussie-style beef and salad tacos
             </Typography>
             <Typography variant="body1" className={classes.article}>
-              Our go-to tacos recipe These tacos are a fresh and flavourful
-              twist on everyone’s favourite Mexican meal. It may stray from
-              Mexican tradition...
+            Our go-to tacos recipe These tacos are a fresh and flavourful twist on everyone’s favourite Mexican meal. It may stray from Mexican tradition
             </Typography>
           </Grid>
         </Grid>

@@ -139,8 +139,8 @@ const HealthRecipes = () => {
             </Typography>
           </Grid>
         </Grid>
-      </section>
-      <section>
+          </section>
+          <section>
         <Grid
           container
           spacing={4}
@@ -172,53 +172,10 @@ const HealthRecipes = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="h3" className={classes.article}>
-              Chicken cacciatore
+            Chicken cacciatore
             </Typography>
             <Typography variant="body1" className={classes.article}>
-              This chicken cacciatore recipe is nutritious and bursts with
-              flavour. Make it ahead and freeze it for later.
-            </Typography>
-          </Grid>
-        </Grid>
-      </section>
-      <section>
-        <Grid
-          container
-          spacing={4}
-          className={classes.section}
-          sx={{ mt: 3, mb: 3 }}
-        >
-          <Grid item xs={12} sm={6}>
-            <img
-              width="90%"
-              height="auto"
-              component="img"
-              style={{
-                borderRadius: "10px",
-                boxShadow: "10px 10px 20px #ccc",
-              }}
-              src="./images/87.AVIF"
-              alt="Aussie-style beef and salad tacos"
-              className={classes.image}
-            />
-            <List>
-              <ListItem
-                component={Link}
-                to="https://www.taste.com.au/recipes/chicken-cacciatore-2/c905b9d2-b6ac-441f-b4ec-0106e8844d10"
-                target="_blank"
-              >
-                <ListItemText className="bottom-right" primary="Get recipe" />
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h3" className={classes.article}>
-              Aussie-style beef and salad tacos
-            </Typography>
-            <Typography variant="body1" className={classes.article}>
-              Our go-to tacos recipe These tacos are a fresh and flavourful
-              twist on everyone’s favourite Mexican meal. It may stray from
-              Mexican tradition...
+            This chicken cacciatore recipe is nutritious and bursts with flavour. Make it ahead and freeze it for later.
             </Typography>
           </Grid>
         </Grid>

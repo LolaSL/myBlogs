@@ -218,7 +218,7 @@ const HealthRecipes = () => {
             <Typography variant="body1" className={classes.article}>
               Our go-to tacos recipe These tacos are a fresh and flavourful
               twist on everyone’s favourite Mexican meal. It may stray from
-              Mexican tradition...
+              Mexican tradition
             </Typography>
           </Grid>
         </Grid>
