@@ -39,19 +39,17 @@ function App() {
       </header>
       <main>
         <Routes>
-
-          <Route path="/health-dinner-recipes" element={<HealthRecipes />} />
-          <Route path="/fashion-style" element={<FashionStyle />} />
-          <Route path="/airport" element={<Airport />} />
-          <Route path="/reasons-to-visit-israel" element={<ReasonToVisitIsrael />} />
-          <Route path="/wheather-and-climate" element={<WheatherAndClimate />} />
-          <Route path="/best-time-to-visit" element={<BestTimeToVisit />} />
-          <Route path="/slide" element={<CompliteGuide />} />
-          <Route path="/journey" element={<Journey />} />
-          <Route path="/tips" element={<TouristTips />} />
-          <Route path="/hotel-tips" element={<HotelTips />} />
-          {!isLoggedIn ? <Route path="/auth" element={<Auth />} /> :
-            <>
+          
+              <Route path="/health-dinner-recipes" element={<HealthRecipes />} />
+              <Route path="/fashion-style" element={<FashionStyle />} />
+              <Route path="/airport" element={<Airport />} />
+              <Route path="/reasons-to-visit-israel" element={<ReasonToVisitIsrael/>} />
+              <Route path="/wheather-and-climate" element={<WheatherAndClimate />} />
+              <Route path="/best-time-to-visit" element={<BestTimeToVisit />} />
+              <Route path="/slide" element={<CompliteGuide />} />
+              <Route path="/journey" element={<Journey />} />
+              <Route path="/tips" element={<TouristTips />} />
+              <Route path="/hotel-tips" element={<HotelTips />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/add" element={<AddBlog />} />
               <Route path="/myBlogs" element={<UserBlogs />} />

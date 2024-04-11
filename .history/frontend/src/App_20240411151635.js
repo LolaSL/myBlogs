@@ -50,9 +50,9 @@ function App() {
           <Route path="/journey" element={<Journey />} />
           <Route path="/tips" element={<TouristTips />} />
           <Route path="/hotel-tips" element={<HotelTips />} />
+          <Route path="/blogs" element={<Blogs />} />
           {!isLoggedIn ? <Route path="/auth" element={<Auth />} /> :
             <>
-              <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/add" element={<AddBlog />} />
               <Route path="/myBlogs" element={<UserBlogs />} />
               <Route path="/myBlogs/:id" element={<BlogDetails />} />
