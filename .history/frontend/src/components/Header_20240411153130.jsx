@@ -62,8 +62,7 @@ const Header = () => {
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -76,11 +75,8 @@ const Header = () => {
               SignIn
             </Button>
           </Box>
+      
      
-           
-        
-        )}
-        {isLoggedIn && (
           <>
             <Box
               fontSize="9px"
@@ -106,8 +102,8 @@ const Header = () => {
                   sx={{ fontSize: "9px" }}
                   textColor="inherit"
                   value={value}
-                  onChange={(e, val) => setValue(val)}
-                >
+                  onChange={(e, val) => setValue(val)}  )}
+                >   {isLoggedIn && (
                   <Tab
                     sx={{ fontSize: "9px" }}
                     className={classes.font}
@@ -176,4 +172,4 @@ const Header = () => {
  };
 
 export default Header;
-
+   

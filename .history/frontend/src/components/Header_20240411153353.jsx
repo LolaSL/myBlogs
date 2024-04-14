@@ -62,8 +62,7 @@ const Header = () => {
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -76,9 +75,6 @@ const Header = () => {
               SignIn
             </Button>
           </Box>
-     
-           
-        
         )}
         {isLoggedIn && (
           <>
@@ -176,4 +172,4 @@ const Header = () => {
  };
 
 export default Header;
-
+   

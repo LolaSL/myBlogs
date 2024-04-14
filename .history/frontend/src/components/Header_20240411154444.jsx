@@ -56,14 +56,13 @@ const Header = () => {
         <Typography className={classes.font} variant="h6">
           Blogs
         </Typography>
-        {!isLoggedIn && (
+        {/* {!isLoggedIn && ( */}
           <Box
             fontSize="9px"
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -76,11 +75,8 @@ const Header = () => {
               SignIn
             </Button>
           </Box>
-     
-           
-        
-        )}
-        {isLoggedIn && (
+        {/* )} */}
+        {/* {isLoggedIn && ( */}
           <>
             <Box
               fontSize="9px"
@@ -169,11 +165,11 @@ const Header = () => {
               LogOut
             </Button>
           </>
-        )}
+        {/* )} */}
      </Toolbar>
     </AppBar>
   );
  };
 
 export default Header;
-
+   

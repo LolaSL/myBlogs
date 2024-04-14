@@ -177,3 +177,62 @@ const Header = () => {
 
 export default Header;
 
+con='right' marginLeft='auto' marginRight='4'>
+            <Button
+              component={Link}
+              to='/auth'
+              variant='contained'
+              sx={{ margin: 1, borderRadius: 10, fontSize: '9px' }}
+              color='primary'
+            >
+              SignIn
+            </Button>
+          </Box>
+        )}
+        {isLoggedIn && (
+          <>
+            {isSmallScreen && (
+              <Drawer anchor='right' open={menuOpen} onClose={toggleMenu}>
+                <List>
+                  <ListItem component={Link} to='/blogs'>
+                    <ListItemText primary='Blogs' />
+                  </ListItem>
+                  <ListItem component={Link} to='/myBlogs'>
+                    <ListItemText primary='My Blogs' />
+                  </ListItem>
+                  <ListItem component={Link} to='/blogs/add'>
+                    <ListItemText primary='Add Blog' />
+                  </ListItem>
+                  <ListItem onClick={toggleMenu}>
+                    <ListItemText primary='Close' />
+                  </ListItem>
+                </List>
+              </Drawer>
+            )}
+
+            {!isSmallScreen && (
+              <>
+                <Ideas />
+                <Guide />
+              </>
+            )}
+            <Button
+              className={styles.font}
+              onClick={handleLogout}
+              component={Link}
+              to='/auth'
+              variant='contained'
+              sx={{ margin: 1, borderRadius: 10, fontSize: '9px' }}
+              color='primary'
+            >
+              LogOut
+            </Button>
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
+   

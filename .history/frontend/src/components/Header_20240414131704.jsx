@@ -62,8 +62,7 @@ const Header = () => {
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -77,7 +76,8 @@ const Header = () => {
             </Button>
           </Box>
      
-           
+              <Ideas />
+              <Guide />
         
         )}
         {isLoggedIn && (
@@ -177,3 +177,89 @@ const Header = () => {
 
 export default Header;
 
+const Header = () => {
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.isLoggedIn);
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLogout = () => {
+    dispatch(authActions.logout());
+    toast.success('Logged out successfully!');
+  };
+
+  return (
+    <AppBar
+      position='sticky'
+      sx={{
+        background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,54,80,1) 35%, rgba(0,212,255,1) 100%)',
+        top: 0,
+      }}
+    >
+      <Toolbar>
+        <Typography className={styles.font} variant='h6'>
+          Blogs
+        </Typography>
+        {!isLoggedIn && (
+          <Box fontSize='9px' position='right' marginLeft='auto' marginRight='4'>
+            <Button
+              component={Link}
+              to='/auth'
+              variant='contained'
+              sx={{ margin: 1, borderRadius: 10, fontSize: '9px' }}
+              color='primary'
+            >
+              SignIn
+            </Button>
+          </Box>
+        )}
+        {isLoggedIn && (
+          <>
+            {isSmallScreen && (
+              <Drawer anchor='right' open={menuOpen} onClose={toggleMenu}>
+                <List>
+                  <ListItem component={Link} to='/blogs'>
+                    <ListItemText primary='Blogs' />
+                  </ListItem>
+                  <ListItem component={Link} to='/myBlogs'>
+                    <ListItemText primary='My Blogs' />
+                  </ListItem>
+                  <ListItem component={Link} to='/blogs/add'>
+                    <ListItemText primary='Add Blog' />
+                  </ListItem>
+                  <ListItem onClick={toggleMenu}>
+                    <ListItemText primary='Close' />
+                  </ListItem>
+                </List>
+              </Drawer>
+            )}
+
+            {!isSmallScreen && (
+              <>
+                <Ideas />
+                <Guide />
+              </>
+            )}
+            <Button
+              className={styles.font}
+              onClick={handleLogout}
+              component={Link}
+              to='/auth'
+              variant='contained'
+              sx={{ margin: 1, borderRadius: 10, fontSize: '9px' }}
+              color='primary'
+            >
+              LogOut
+            </Button>
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
+   

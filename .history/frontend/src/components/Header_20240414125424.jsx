@@ -56,14 +56,13 @@ const Header = () => {
         <Typography className={classes.font} variant="h6">
           Blogs
         </Typography>
-        {!isLoggedIn && (
+        {/* {!isLoggedIn && (
           <Box
             fontSize="9px"
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -75,12 +74,27 @@ const Header = () => {
             >
               SignIn
             </Button>
-          </Box>
-     
-           
-        
-        )}
-        {isLoggedIn && (
+          </Box>    <Box
+              fontSize="9px"
+              display="flex"
+              marginLeft={"auto"}
+              marginRight={"auto"}
+            >
+              {isSmallScreen ? (
+                <>
+                  <Ideas />
+                  <Guide />
+                  <Button
+                    className={classes.font}
+                    onClick={toggleMenu}
+                    variant="text"
+                    sx={{ margin: 1, borderRadius: 10, fontSize: "9px", color: "white" }}
+                  >
+                    Menu
+                  </Button>
+                </>
+        )} */}
+        {!isLoggedIn && (
           <>
             <Box
               fontSize="9px"
@@ -176,4 +190,4 @@ const Header = () => {
  };
 
 export default Header;
-
+   

@@ -56,14 +56,14 @@ const Header = () => {
         <Typography className={classes.font} variant="h6">
           Blogs
         </Typography>
-        {!isLoggedIn && (
+        {!isLoggedIn && ( 
+            <> 
           <Box
             fontSize="9px"
             position="right"
             marginLeft={"auto"}
             marginRight={"4"}
-          >   <Ideas />
-              <Guide />
+          >
             <Button
               display="flex"
               className={classes.font}
@@ -77,11 +77,9 @@ const Header = () => {
             </Button>
           </Box>
      
-           
-        
-        )}
-        {isLoggedIn && (
-          <>
+
+     
+         
             <Box
               fontSize="9px"
               display="flex"
@@ -100,8 +98,10 @@ const Header = () => {
                   >
                     Menu
                   </Button>
-                </>
-              ) : (
+              </>     )}
+              
+            ) : (
+       {isLoggedIn && (
                 <Tabs
                   sx={{ fontSize: "9px" }}
                   textColor="inherit"
@@ -153,27 +153,25 @@ const Header = () => {
             )}
 
             {!isSmallScreen && (
-              <>
+          
                 <Ideas /> <Guide />
-              </>
-            )}
-            <Button
-              className={classes.font}
-              onClick={handleLogout} 
-              LinkComponent={Link}
-              to="/auth"
-              variant="contained"
-              sx={{ margin: 1, borderRadius: 10, fontSize: "9px" }}
-              color="primary"
-            >
-              LogOut
-            </Button>
-          </>
-        )}
+              </><Button
+                className={classes.font}
+                onClick={handleLogout}
+                LinkComponent={Link}
+                to="/auth"
+                variant="contained"
+                sx={{ margin: 1, borderRadius: 10, fontSize: "9px" }}
+                color="primary"
+              >
+                  LogOut
+                </Button></>
+        
+       )}
      </Toolbar>
     </AppBar>
   );
  };
 
 export default Header;
-
+   
