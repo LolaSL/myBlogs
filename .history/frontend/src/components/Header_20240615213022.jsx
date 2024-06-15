@@ -29,7 +29,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Header = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.isLoggedIn);
+  // const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const [value, setValue] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -82,8 +82,8 @@ const Header = () => {
      
            
         
-      )} 
-     {isLoggedIn && ( 
+        {/* )} */}
+        {/* {isLoggedIn && ( */}
           <>
             <Box
               fontSize="9px"
@@ -172,7 +172,7 @@ const Header = () => {
               LogOut
             </Button>
           </>
-        )} 
+        {/* )} */}
      </Toolbar>
     </AppBar>
   );

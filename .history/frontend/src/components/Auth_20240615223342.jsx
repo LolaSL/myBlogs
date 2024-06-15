@@ -142,7 +142,7 @@ import { useNavigate } from "react-router-dom";
 import useStyles from "./utils";
 import { toast } from 'react-toastify';
 import { getError } from '../errors.js';
-import API_BASE_URL from '../config.js'; // Import the API base URL
+import API_BASE_URL from '../config'; // Import the API base URL
 
 const Auth = () => {
   const classes = useStyles();
