@@ -19,7 +19,7 @@ import Airport from './pages/Airport.jsx'
 import FashionStyle from './pages/FashionStyle.jsx';
 import { ToastContainer } from 'react-toastify';
 import HealthRecipes from './pages/HealthRecipes.jsx'
-
+import API_BASE_URL from './config';
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
     if (localStorage.getItem("userId"))
       dispatch(authActions.login())
   }, [dispatch])
+
 
 
 

@@ -19,7 +19,7 @@ import Airport from './pages/Airport.jsx'
 import FashionStyle from './pages/FashionStyle.jsx';
 import { ToastContainer } from 'react-toastify';
 import HealthRecipes from './pages/HealthRecipes.jsx'
-
+import API_BASE_URL from './config';
 
 
 function App() {
@@ -33,6 +33,19 @@ function App() {
   }, [dispatch])
 
 
+fetch(`${API_BASE_URL}/api/user/login`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    username: 'example',
+    password: 'password',
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error('Error:', error));
 
   return (
     <React.Fragment>

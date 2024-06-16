@@ -16,8 +16,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import {
-  useSelector,
-  useDispatch
+  useSelector, useDispatch
 } from "react-redux";
 import { authActions } from "../store";
 import useStyles from "./utils";
@@ -29,7 +28,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Header = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.isLoggedIn);
+  // const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const [value, setValue] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -59,7 +58,7 @@ const Header = () => {
         <Typography className={classes.font} variant="h6">
           Blogs
         </Typography>
-        {!isLoggedIn && (
+        {/* {!isLoggedIn && ( */}
           <Box
             fontSize="9px"
             position="right"
@@ -82,8 +81,8 @@ const Header = () => {
      
            
         
-      )} 
-     {isLoggedIn && ( 
+        {/* )} */}
+        {/* {isLoggedIn && ( */}
           <>
             <Box
               fontSize="9px"
@@ -172,7 +171,7 @@ const Header = () => {
               LogOut
             </Button>
           </>
-        )} 
+        {/* )} */}
      </Toolbar>
     </AppBar>
   );

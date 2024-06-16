@@ -83,7 +83,7 @@ const Header = () => {
            
         
       )} 
-     {isLoggedIn && ( 
+        {/* {isLoggedIn && ( */}
           <>
             <Box
               fontSize="9px"
@@ -172,7 +172,7 @@ const Header = () => {
               LogOut
             </Button>
           </>
-        )} 
+        {/* )} */}
      </Toolbar>
     </AppBar>
   );

@@ -31,8 +31,22 @@ function App() {
     if (localStorage.getItem("userId"))
       dispatch(authActions.login())
   }, [dispatch])
+// Using the API base URL in your code
+import API_BASE_URL from './config';
 
-
+fetch(`${API_BASE_URL}/api/user/login`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    username: 'example',
+    password: 'password',
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error('Error:', error));
 
   return (
     <React.Fragment>
