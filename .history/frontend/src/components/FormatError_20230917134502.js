@@ -1,3 +1,0 @@
-export FormatError(errorRe){
-
-}
